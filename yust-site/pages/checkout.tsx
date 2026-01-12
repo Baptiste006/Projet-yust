@@ -18,7 +18,7 @@ export default function CheckoutPage() {
   return (
     <>
       <Header />
-      <main className="max-w-4xl mx-auto p-6">
+      <main className="max-w-4xl mx-auto h-[700px] p-6">
         <h1 className="text-3xl font-bold mb-6">Résumé de la commande</h1>
 
         {cart.length === 0 ? (

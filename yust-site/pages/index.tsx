@@ -12,7 +12,7 @@ export default function Home() {
 
       {/* Section Hero / Bannière */}
       <section
-        className="relative h-[600px] flex flex-col items-center justify-center 
+        className="relative h-[750px] flex flex-col items-center justify-center 
                    bg-gradient-to-b from-white via-neutral-100 to-neutral-200 overflow-hidden"
         translate="no" // Protège tout le bloc contre la traduction
       >

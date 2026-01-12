@@ -6,6 +6,8 @@ import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
+import { LuMenu }  from "react-icons/lu"
+import { BsBag, BsList, BsSearch } from "react-icons/bs";
 
 export default function Header() {
   const [showHeader, setShowHeader] = useState(true); // header visible ou non
@@ -62,15 +64,7 @@ export default function Header() {
       <div className="mx-auto flex justify-between items-center p-4 relative">
         {/* --- Menu gauche --- */}
         <div className="flex space-x-6 items-center">
-          {["shop", "about"].map((item) => (
-            <Link
-              key={item}
-              href={`/${item}`}
-              className="font-medium text-black hover:text-gray-600 transition-colors duration-300"
-            >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-            </Link>
-          ))}
+       <BsList className="text-black size-6"  />
         </div>
 
         {/* --- Logo --- */}
@@ -96,14 +90,14 @@ export default function Header() {
         </div>
 
         {/* --- Menu droit --- */}
-        <div className="flex space-x-4 items-center relative">
+        <div className="flex space-x-6 items-center relative">
           {/* Loupe */}
           <button
             onClick={handleSearchClick}
             className="transition-colors duration-300 transform hover:scale-110 text-black hover:text-gray-700"
             aria-label="Rechercher"
           >
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="text-[18px]" />
+            <BsSearch className="size-5"/>
           </button>
 
           {/* Panier */}
@@ -113,7 +107,7 @@ export default function Header() {
               className="transition-colors duration-300 transform hover:scale-110 text-black hover:text-gray-700"
               aria-label="Panier"
             >
-              <FontAwesomeIcon icon={faBagShopping} className="text-[20px]" />
+              <BsBag size-6 className="size-5" />
             </Link>
 
             {/* Badge dynamique */}

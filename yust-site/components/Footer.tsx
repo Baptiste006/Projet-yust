@@ -38,6 +38,7 @@ export default function Footer() {
           <a href="/confidentialite" className="block hover:opacity-60 transition">Confidentialité</a>
           <a href="/cgv" className="block hover:opacity-60 transition">CGV</a>
           <a href="/cookies" className="block hover:opacity-60 transition">Cookies</a>
+          <a href="/about" className="block hover:opacity-60 transition">À propos</a>
         </div>
 
         {/* RÉSEAUX SOCIAUX */}
