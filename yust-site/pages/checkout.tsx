@@ -7,12 +7,11 @@ export default function CheckoutPage() {
   const { cart, clearCart } = useCart(); // <- ajouter clearCart
   const router = useRouter();
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);;
   const handleConfirmOrder = () => {
-    alert("Commande confirmée ! Merci pour ton achat chez YUST 🖤");
-    clearCart(); // <- vide le panier
-    router.push("/"); // redirection vers l'accueil
+    
+    
+    router.push("/payment_F"); 
   };
 
   return (
